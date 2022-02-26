@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/style-img.css';
+import '../../css/style-img.css';
 
 const Section01_10 = () => {
   return (
