@@ -1,71 +1,44 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Sections from './Sections';
 
 const list = [
   {
-    title: '01 表示方法 display',
+    title: '01 アイコン SVG Heroicons',
     to: '/section03_01',
   },
   {
-    title: '02 Flexboxサンプル1 メニュー',
+    title: '02 Flexbox + レスポンシブ その1',
     to: '/section03_02',
   },
   {
-    title: '03 Flexサンプル2 横並び・交互',
+    title: '03 Flexbox + レスポンシブ その2',
     to: '/section03_03',
   },
   {
-    title: '04 Gridを試してみる',
+    title: '04 ボタン(優先度をつける)',
     to: '/section03_04',
   },
   {
-    title: '05 Gridサンプル フッター',
+    title: '05 カード',
     to: '/section03_05',
   },
   {
-    title: '06 レスポンシブ対応を試してみる',
+    title: '06 フォーム',
     to: '/section03_06',
   },
   {
-    title: '07 要素を重ねる、固定する position',
+    title: '07 サンプル集',
     to: '/section03_07',
-  },
-  {
-    title: '08 要素を重ねる z-index',
-    to: '/section03_08',
-  },
-  {
-    title: '09 はみ出したときの調整 overflow',
-    to: '/section03_09',
-  },
-  {
-    title: '10 表示・非表示 visibility',
-    to: '/section03_10',
-  },
-  {
-    title: '11 コンテナ container',
-    to: '/section03_11',
   },
 ];
 
+const props = {
+  title: 'Section03',
+  list: list,
+};
+
 const Section03 = () => {
-  return (
-    <ul className='border-2'>
-      <h1 className='font-bold uppercase'>Section03</h1>
-      {list.map((item, index) => {
-        return (
-          <>
-            <li
-              key={index}
-              className='text-blue-700 border-b-2 hover:underline'
-            >
-              <Link to={item.to}>{item.title}</Link>
-            </li>
-          </>
-        );
-      })}
-    </ul>
-  );
+  return <Sections title={props.title} list={props.list}></Sections>;
 };
 
 export default Section03;

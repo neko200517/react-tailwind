@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Sections from './Sections';
 
 const list = [
   {
@@ -48,24 +48,13 @@ const list = [
   },
 ];
 
+const props = {
+  title: 'Section02',
+  list: list,
+};
+
 const Section02 = () => {
-  return (
-    <ul className='border-2'>
-      <h1 className='font-bold uppercase'>Section02</h1>
-      {list.map((item, index) => {
-        return (
-          <>
-            <li
-              key={index}
-              className='text-blue-700 border-b-2 hover:underline'
-            >
-              <Link to={item.to}>{item.title}</Link>
-            </li>
-          </>
-        );
-      })}
-    </ul>
-  );
+  return <Sections title={props.title} list={props.list}></Sections>;
 };
 
 export default Section02;
